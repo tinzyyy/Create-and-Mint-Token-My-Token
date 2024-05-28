@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MyToken is ERC20, Ownable {
     constructor() ERC20("MyToken", "MTK") Ownable(msg.sender) {
-       
+        
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
@@ -18,7 +18,12 @@ contract MyToken is ERC20, Ownable {
     }
     
     function getAllowance(address spender) public view returns (uint256) {
-        return allowance(msg.sender, spender);
+        return allowance(_msgSender(), spender);
     }
+
     
+    function transferTokens(address to, uint256 amount) public returns (bool) {
+        _transfer(_msgSender(), to, amount);
+        return true;
+    }
 }

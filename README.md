@@ -1,6 +1,6 @@
 # MyToken - ERC20 Token Contract
 
-This contract, named MyToken, is an ERC20-compatible token developed on the Ethereum blockchain. It facilitates the creation and management of a custom token with the functionality of standard ERC20 tokens.
+This contract, named `MyToken`, is an ERC20-compatible token developed on the Ethereum blockchain. It facilitates the creation and management of a custom token with the functionality of standard ERC20 tokens.
 
 ## Description
 
